@@ -27,7 +27,6 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
             super(v);
             mTextView = (TextView) v.findViewById(R.id.tv_recycler_item);
             mImageButton = (ImageButton) v.findViewById(R.id.edit_btn);
-            mImageButton = (ImageButton) v.findViewById(R.id.delete_btn);
         }
     }
 
