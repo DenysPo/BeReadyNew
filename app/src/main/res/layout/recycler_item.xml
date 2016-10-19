@@ -6,16 +6,20 @@
     android:layout_height="56dp"
     >
 
-    <TextView
+    <EditText
         android:id="@+id/tv_recycler_item"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
         android:gravity="center_vertical"
-        android:textSize="21sp"
-        android:layout_marginBottom="11dp"
-        android:layout_marginTop="11dp"
+        android:textSize="26sp"
+        android:cursorVisible="true"
+        android:longClickable="false"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_marginBottom="13dp"
+        android:layout_marginTop="13dp"
         android:layout_marginStart="7dp"
-        android:hint="@string/edit_message"
+        android:hint="@string/enter_new_item"
         android:textStyle="bold"/>
 
     <Button

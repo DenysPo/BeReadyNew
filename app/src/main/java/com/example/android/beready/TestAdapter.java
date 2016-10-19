@@ -50,7 +50,7 @@ public class TestAdapter extends RecyclerView.Adapter {
         if (itemsPendingRemoval.contains(item)) {
             // we need to show the "undo" state of the row
             viewHolder.itemView.setBackgroundColor(Color.RED);
-            viewHolder.titleTextView.setVisibility(View.GONE);
+            viewHolder.titleEditText.setVisibility(View.GONE);
             viewHolder.undoButton.setVisibility(View.VISIBLE);
             viewHolder.undoButton.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -67,8 +67,8 @@ public class TestAdapter extends RecyclerView.Adapter {
         } else {
             // we need to show the "normal" state
             viewHolder.itemView.setBackgroundColor(Color.WHITE);
-            viewHolder.titleTextView.setVisibility(View.VISIBLE);
-            viewHolder.titleTextView.setText(item);
+            viewHolder.titleEditText.setVisibility(View.VISIBLE);
+            viewHolder.titleEditText.setText(item);
             viewHolder.undoButton.setVisibility(View.GONE);
             viewHolder.undoButton.setOnClickListener(null);
         }

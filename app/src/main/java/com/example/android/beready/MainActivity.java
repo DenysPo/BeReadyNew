@@ -7,23 +7,18 @@ import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
-import android.os.Build;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.support.v7.widget.helper.ItemTouchHelper;
 import android.util.Log;
-import android.view.Gravity;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.Toast;
@@ -38,14 +33,11 @@ import com.mikepenz.materialdrawer.model.interfaces.Badgeable;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.Nameable;
 
-import junit.framework.Test;
 
 
 public class MainActivity extends ActionBarActivity {
 
     private RecyclerView mRecyclerView;
-    private RecyclerView.Adapter mAdapter;
-    private RecyclerView.LayoutManager mLayoutManager;
     private Drawer.Result drawerResult = null;
 
 
@@ -57,7 +49,6 @@ public class MainActivity extends ActionBarActivity {
         setSupportActionBar(toolbar);
         mRecyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
         setUpRecyclerView();
-
         drawerResult = new Drawer()
                 .withActivity(this)
                 .withToolbar(toolbar)
@@ -68,8 +59,8 @@ public class MainActivity extends ActionBarActivity {
                         new PrimaryDrawerItem().withName(R.string.drawer_item_choose_list).withIcon(FontAwesome.Icon.faw_gamepad),
                         new PrimaryDrawerItem().withName(R.string.drawer_item_custom).withIcon(FontAwesome.Icon.faw_eye).withBadge("6").withIdentifier(2),
                         new SectionDrawerItem().withName(R.string.drawer_item_settings),
-                        new SecondaryDrawerItem().withName(R.string.drawer_item_help).withIcon(FontAwesome.Icon.faw_cog),
-                        new SecondaryDrawerItem().withName(R.string.drawer_item_open_source).withIcon(FontAwesome.Icon.faw_question).setEnabled(false),
+                        new SecondaryDrawerItem().withName(R.string.drawer_item_open_source).withIcon(FontAwesome.Icon.faw_cog),
+                        new SecondaryDrawerItem().withName(R.string.drawer_item_help).withIcon(FontAwesome.Icon.faw_question).setEnabled(false),
                         new DividerDrawerItem(),
                         new SecondaryDrawerItem().withName(R.string.drawer_item_contact).withIcon(FontAwesome.Icon.faw_github).withBadge("12+").withIdentifier(1)
                 )

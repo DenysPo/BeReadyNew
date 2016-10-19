@@ -14,6 +14,7 @@
     <string name="edit_message">Edit Message</string>
     <string name="button_undo">undo</string>
     <string name="menu_checkbox_undo">Undo</string>
+    <string name="enter_new_item">Please enter new item</string>
     <string name="menu_add_5_items">Add 5 items</string>
     <string name="delete_all">Delete all items</string>
 </resources>
